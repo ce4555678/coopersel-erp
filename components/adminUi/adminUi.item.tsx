@@ -3,12 +3,14 @@ import { TableCell, TableRow } from "../ui/table";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 import relativeTime from "dayjs/plugin/relativeTime";
+import type { ReactNode } from "react";
 
 type Props = {
   id: string;
   role: string;
   username: string;
   createdAt: Date;
+  children: ReactNode;
 };
 
 export default function AdminUiItem(props: Props) {
@@ -24,11 +26,10 @@ export default function AdminUiItem(props: Props) {
         {props.role.toLocaleLowerCase()}
       </TableCell>
       <TableCell>{dayjs().to(dayjs(props.createdAt))}</TableCell>
-      <TableCell className="flex items-center">
-        <Dot className="h-4 w-4" />
-        <Dot className="h-4 w-4" />
-        <Dot className="h-4 w-4" />
-        <Dot className="h-4 w-4" />
+      <TableCell>
+        <span className="flex gap-3">
+        {props.children}
+        </span>
       </TableCell>
     </TableRow>
   );

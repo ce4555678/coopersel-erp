@@ -47,7 +47,10 @@ export default async function Admin() {
             username={user.username}
             key={`${user.id} ${index}`}
             createdAt={user.createdAt}
-          />
+          >
+            <AdminUi.delete id={user.id} username={user.username}/>
+            <AdminUi.edit id={user.id} username={user.username}/>
+          </AdminUi.item>
         ))}
       </AdminUi.table>
     </Container>
