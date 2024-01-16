@@ -25,6 +25,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# local path
+/app/api/generate-user
+
 # local env files
 .env*.local
 .env
