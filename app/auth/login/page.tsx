@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 export default function Login() {
   return (
-  <Container className="pt-10">
+  <Container className="pt-4">
     <div className="flex items-center justify-center pb-4">
         <span className="h-24 w-24 border border-blue-200 rounded-full overflow-hidden">
     <Image alt="logo" src="/android-chrome-512x512.png" width={200} height={200}/>

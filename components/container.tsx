@@ -9,7 +9,7 @@ const Container = React.forwardRef<HTMLElement, ContainerProps>(
     return (
       <section
         ref={ref}
-        className={cn("mx-auto container max-w-screen-xl px-4", className)}
+        className={cn("mx-auto container pb-8 max-w-screen-xl px-4", className)}
         {...props}
       >
         {children}

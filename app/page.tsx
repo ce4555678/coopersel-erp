@@ -19,23 +19,32 @@ import {
   UserCog,
   Users,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
-      <h1 className="py-8 text-center text-2xl md:text-3xl font-bold antialiased">
-        Menu de navegação
-      </h1>
-      <Container className="pb-8 md:pb-12">
-        <div className="justify-center  flex">
-          <div className="gap-3 md:gap-5 lg:gap-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            {menu.map(({ title, href, icon }, index) => (
-              <HomeUi.card key={index} title={title} href={href} icon={icon} />
-            ))}
-          </div>
+    <Container className="pt-4">
+      <div className="flex items-center justify-center py-4 gap-2">
+        <div className="h-24 w-24 border border-blue-200 rounded-full overflow-hidden">
+          <Image
+            alt="logo"
+            src="/android-chrome-512x512.png"
+            width={200}
+            height={200}
+          />
         </div>
-      </Container>
-    </main>
+      </div>
+      <h1 className="text-center text-2xl font-semibold antialiased">
+          Menu de navegação - Coopersel
+        </h1>
+      <div className="justify-center pt-4 flex">
+        <div className="gap-3 md:gap-5 lg:gap-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          {menu.map(({ title, href, icon }, index) => (
+            <HomeUi.card key={index} title={title} href={href} icon={icon} />
+          ))}
+        </div>
+      </div>
+    </Container>
   );
 }
 

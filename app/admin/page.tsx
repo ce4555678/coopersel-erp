@@ -36,7 +36,7 @@ export default async function Admin() {
 
   if (isAdmin?.role !== "ADMIN") return redirect("/");
   return (
-    <Container className="pt-10">
+    <Container className="pt-4">
       <div className="pb-4 flex items-center gap-2 justify-center">
       <UserCog className="h-7 w-7"/>
       <h1 className="font-semibold antialiased text-2xl">
