@@ -24,7 +24,7 @@ export default function AdminUiDelete(props: Props) {
       <Tooltip>
         <TooltipTrigger asChild>
           <AlertDialogTrigger asChild>
-            <Button variant="outline" size={"icon"}>
+            <Button variant="destructive" size={"icon"}>
               <Trash className="h-4 w-4" />
             </Button>
           </AlertDialogTrigger>
@@ -37,7 +37,7 @@ export default function AdminUiDelete(props: Props) {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>
-            Excluir <strong>{props.username}</strong>
+            Exclusão do usuário <strong>{props.username}</strong>
           </AlertDialogTitle>
           <AlertDialog>
             Fazendo isso, você excluirá este usuário permanentemente. Deseja

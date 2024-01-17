@@ -22,6 +22,7 @@ export default function AdminUiTable(props: Props) {
             <TableHead>Username</TableHead>
             <TableHead>Permissão de acesso</TableHead>
             <TableHead>Criado</TableHead>
+            <TableHead>Senha</TableHead>
             <TableHead>Opções</TableHead>
           </TableRow>
         </TableHeader>

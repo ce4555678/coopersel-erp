@@ -2,6 +2,7 @@ import AdminUi from "@/components/adminUi";
 import Container from "@/components/container";
 import authOptions from "@/lib/authOptions";
 import prisma from "@/lib/prisma";
+import { UserCog } from "lucide-react";
 import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
@@ -36,9 +37,12 @@ export default async function Admin() {
   if (isAdmin?.role !== "ADMIN") return redirect("/");
   return (
     <Container className="pt-10">
-      <h1 className="text-center pb-4 font-semibold antialiased text-2xl">
+      <div className="pb-4 flex items-center gap-2 justify-center">
+      <UserCog className="h-7 w-7"/>
+      <h1 className="font-semibold antialiased text-2xl">
         Administrador
       </h1>
+      </div>
       <AdminUi.table>
         {users.map((user, index) => (
           <AdminUi.item
@@ -49,7 +53,6 @@ export default async function Admin() {
             createdAt={user.createdAt}
           >
             <AdminUi.delete id={user.id} username={user.username}/>
-            <AdminUi.edit id={user.id} username={user.username}/>
           </AdminUi.item>
         ))}
       </AdminUi.table>

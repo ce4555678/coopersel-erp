@@ -1,9 +1,7 @@
-import { Dot } from "lucide-react";
+import { Dot, EyeOff, MoreHorizontal } from "lucide-react";
 import { TableCell, TableRow } from "../ui/table";
-import dayjs from "dayjs";
-import "dayjs/locale/pt-br";
-import relativeTime from "dayjs/plugin/relativeTime";
 import type { ReactNode } from "react";
+import RelativeTime from "../relativeTime";
 
 type Props = {
   id: string;
@@ -14,23 +12,17 @@ type Props = {
 };
 
 export default function AdminUiItem(props: Props) {
-  dayjs().locale("pt-br").format();
-  dayjs.extend(relativeTime)
-
   return (
     <TableRow>
-      <TableCell className="font-medium antialiased">
-        {props.username}
-      </TableCell>
-      <TableCell className="capitalize font-medium antialiased">
-        {props.role.toLocaleLowerCase()}
-      </TableCell>
-      <TableCell>{dayjs().to(dayjs(props.createdAt))}</TableCell>
+      <TableCell>{props.username}</TableCell>
+      <TableCell className="capitalize">{props.role.toLocaleLowerCase()}</TableCell>
       <TableCell>
-        <span className="flex gap-3">
-        {props.children}
-        </span>
+        <RelativeTime data={props.createdAt} />
       </TableCell>
+      <TableCell>
+        <MoreHorizontal className="h-7 w-7" />
+      </TableCell>
+      <TableCell>{props.children}</TableCell>
     </TableRow>
   );
 }
