@@ -13,7 +13,7 @@ export default function Cooperados() {
 
       <Card>
         <CooperadosUi.table>
-          
+          <span/>
         </CooperadosUi.table>
       </Card>
     </Container>
