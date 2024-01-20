@@ -19,6 +19,12 @@ enum Role {
   ESCRITORIO
 }
 
+enum Genero {
+  HOMEM
+  MULHER
+  OUTROS
+}
+
 model User {
   id            String   @id @default(cuid())
   username      String   @unique
@@ -27,4 +33,21 @@ model User {
   role          Role
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
+}
+
+model Cooperados {
+  id                 Int       @id @default(autoincrement())
+  nome               String
+  birth              DateTime
+  CPF                Int
+  RG                 String
+  entrada            DateTime
+  saida              DateTime?
+  genero             Genero
+  nis                Int?
+  carteiraDeTrabalho String?
+  tituloDeEleitor    String?
+  SUS                String?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
 }

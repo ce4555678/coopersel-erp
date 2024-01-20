@@ -5,6 +5,7 @@ import {
   ArrowUpWideNarrow,
   BarChart3,
   BarChartBig,
+  Bird,
   BookOpen,
   BookText,
   BookUser,
@@ -96,6 +97,11 @@ const menu = [
   {
     title: "Relatórios",
     icon: ClipboardList,
+    href: "/dre",
+  },
+  {
+    title: "Fiados",
+    icon: Bird,
     href: "/dre",
   },
   {

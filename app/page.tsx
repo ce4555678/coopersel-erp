@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </div>
       <h1 className="text-center text-2xl font-semibold antialiased">
-          Menu de navegação - Coopersel
+          Menu de navegação - Coopersel ERP
         </h1>
       <div className="justify-center pt-4 flex">
         <div className="gap-3 md:gap-5 lg:gap-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
@@ -80,7 +80,7 @@ const menu = [
     href: "/material-de-catadores",
   },
   {
-    title: "Garimpô ecoloja",
+    title: "Garimpô EcoLoja",
     icon: ShoppingBag,
     href: "/garimpo",
   },
@@ -123,11 +123,6 @@ const menu = [
     title: "Controle de prensagem",
     icon: Layers,
     href: "/controle-de-prensagem",
-  },
-  {
-    title: "Devedores Garimpô",
-    icon: ShoppingCart,
-    href: "/rateio",
   },
   {
     title: "Administrador",

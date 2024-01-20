@@ -22,6 +22,7 @@ export default function CooperadosUiTable(props: Props) {
             <TableHead>Matrícula</TableHead>
             <TableHead>Nome</TableHead>
             <TableHead>Status</TableHead>
+            <TableHead>Idade</TableHead>
             <TableHead>CPF</TableHead>
             <TableHead>RG</TableHead>
             <TableHead>Adesão</TableHead>
